@@ -6,7 +6,7 @@ from psycopg2.pool import SimpleConnectionPool
 from contextlib import contextmanager
 
 #initialize a simple connection pool 
-pool = SimpleConnectionPool(minconn=1,maxconn=8,
+pool = SimpleConnectionPool(minconn=1,maxconn=5,
                             user=os.environ.get("USER"),
                             password = os.environ.get("PASSWORD"),
                             host = os.environ.get("HOSTNAME"),

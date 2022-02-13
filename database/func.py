@@ -2,7 +2,7 @@
 import psycopg2
 from psycopg2.extras import execute_values
 
-INSERT_DATA = "INSERT INTO mytable (id,column1,column2) VALUES %s RETURNING id"
+INSERT_DATA = "INSERT INTO mytable (id,column1,column2,geom) VALUES %s RETURNING id"
 
 def add_data(conn,values):
     with conn,conn.cursor() as cursor:
